@@ -1,0 +1,37 @@
+body {
+    font-family: "Kosugi Maru";
+    max-width: 1000px;
+  }
+  
+.kosugi-maru-regular {
+    font-family: "Kosugi Maru", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+.ContentWrapper {
+    margin-top:10px;
+    width: 1000px;
+  }
+
+details summary {
+    width: 800px;
+    height: 80px;
+    margin-left: 80px;
+    margin-bottom:30px;
+    padding-left:20px;
+    color: rgb(110, 110, 110);
+    background-color: rgb(245, 245, 245,0.5);
+    font-size:16px;
+    line-height: 80px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px rgb(110,110,110,0.5);
+}
+
+
+.RecruitmentSummary dl {
+    margin-left:100px;
+    color: rgb(110, 110, 110);
+    font-size:14px;
+    line-height: 1.5;
+}

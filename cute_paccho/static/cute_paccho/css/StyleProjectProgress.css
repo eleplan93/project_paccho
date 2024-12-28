@@ -1,0 +1,95 @@
+.Legend {
+  margin-bottom:10px;
+  margin-right: 20px;
+  padding-bottom:8px;
+  width: 200px;
+  height: 40px;
+  text-align: center;
+  color: rgb(110,110,110);
+  font-size:16px;
+  border-radius: 10px;
+  
+}
+
+.TableArea {
+  display: grid;
+  justify-self: center;
+  width: 850px;
+
+}
+
+.TableCellStyle {
+    padding: 5px 5px 5px 5px;
+    color: rgb(110,110,110);
+    font-size: 14px;
+  }
+
+.alartRed {
+  background-color: rgb(255, 0, 0,0.2);
+}
+
+.alartYellow {
+  background-color: rgb(255, 255, 0,0.2);
+}
+
+.TableArea tr:first-child { 
+    background-color: #4e4e4e;
+  }
+
+.firstRowWord {
+    padding: 5px 5px 5px 5px;
+    color: white;
+    font-size: 14px;
+  }
+
+.ProgressTable td:nth-child(1) {
+    width: 5%;
+  }
+
+.ProgressTable td:nth-child(2) {
+  width: 10%;
+}
+
+.ProgressTable td:nth-child(3) {
+  width: 15%;
+}
+
+.ProgressTable td:nth-child(4) {
+  width: 5%;
+}
+
+.ProgressTable td:nth-child(5) {
+  width: 10%;
+}
+
+.ProgressTable td:nth-child(6) {
+  width: 5%;
+}
+
+.ProgressTable td:nth-child(7) {
+  width: 5%;
+}
+
+.ProgressTable td:nth-child(8) {
+  width: 10%;
+}
+
+.ProgressTable td:nth-child(9) {
+  width: 5%;
+}
+
+.ProgressTable td:nth-child(10) {
+  width: 20%;
+}
+
+.ProgressTable td:nth-child(11) {
+  width: 10%;
+}
+
+.odd-row {
+  background-color: rgb(110,110,110,0.2); /* 奇数行の背景色 */
+}
+
+.even-row {
+  background-color: #ffffff; /* 偶数行の背景色 */
+}

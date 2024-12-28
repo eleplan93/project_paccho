@@ -1,0 +1,41 @@
+body {
+    font-family: "Kosugi Maru";
+    max-width: 1000px;
+}
+
+.kosugi-maru-regular {
+    font-family: "Kosugi Maru", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }  
+
+.ContentWrapper {
+    margin-top:10px;
+    width: 1000px;
+}
+
+.MainCulculation {
+    margin-left: 80px;
+    color: rgb(110,110,110,1);
+}
+
+.AnswerTable { 
+    border-collapse: collapse;
+    width: 500px;
+    height: 100px;
+    margin-bottom: 20px;
+}
+  
+.AnswerTable td { 
+    border: 1px solid rgb(110,110,110,1);
+}
+
+.AnswerTable tr:first-child {
+    background-color: rgb(54, 190, 0);
+    color: white;
+}
+
+.AnswerTable tr {
+    font-size: 16px;
+    color: rgb(110,110,110,1);
+}

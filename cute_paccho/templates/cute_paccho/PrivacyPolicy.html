@@ -1,0 +1,126 @@
+{% load static %}
+<!docutype html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="ELEPLANのプライバシーポリシーを確認頂けます">
+        <titele>ELEPLAN|プライバシーポリシー</title>
+        <link rel="icon" href="favicon.ico">
+
+        <link rel="stylesheet" type="text/css" href="{% static 'cute_paccho/css/style.css' %}"/>
+        <link rel="stylesheet" type="text/css" href="{% static 'cute_paccho/css/StylePrivacyPolicy.css' %}"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap" rel="stylesheet">
+        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=vpn_key" />
+        
+        <style>
+            body { font-family: 'Kosugi Maru'; }
+        </style>
+    </head>
+    
+    <body>
+        <header>
+            <nav class="HeaderArea">
+                <a href="{% url 'index' %}"><h1>ELEPLAN</h1></a>
+                <div class="selecters">
+                    <a class="header_selecters" href="{% url 'CompanyProfIndex' %}">会社概要</a>
+                    <a class="header_selecters" href="{% url 'Recruitment' %}">採用・募集</a>
+                    <a class="header_selecters" href="{% url 'FaqIndexAdd' %}">問合せ</a>
+                    <a class="login_bottom" href="{% url 'MembersIndex' %}"><span class="material-symbols-outlined">
+                        vpn_key</span>メンバーサイト</a>
+                </div>
+            </nav>
+        </header>
+
+        <div class="ContentWrapper">
+            <div class="PrivacyPolicyArea">
+                <h2>プライバシーポリシー</h2>
+                <dl>
+                    <dd>株式会社ELEPLAN(以下、当社)は、業務委託、当社への問合せ、その他当社が実施するサービスのため、
+                        氏名、住所、電話番号、e-mailアドレスなどの個人情報をお預かりする場合があります。
+                        当社は個人情報保護に関する法令を遵守し、以下の通りプライバシーポリシーを定めます。
+                        <br>プライバシーポリシーは個人情報の取り扱いを、何のために利用、どのように管理するかについて明らかにするもので、
+                        当社は個人情報の取り扱いおよびセキュリティに細心の注意を払います。
+                        <br>当社は本プライバシーポリシーの遵守を当社内に徹底しております。
+                    </dd>
+                    <dt>法令等の遵守について</dt>
+                        <dd>当社は個人情報の取り扱い、管理、および利用等に関して日本国法を適用します。また、当社は個人情報に関す
+                            る法律および個人情報について適用される諸法令および管轄省庁のガイドライン等を遵守し、法令の変更等、必要
+                            に応じて各項目の変更を行ないます。
+                        </dd>
+                    <dt>個人情報とは</dt>
+                        <dd>本プライバシーポリシーにおいて個人情報とは、当社が運営／管理する本サイト（携帯サイトを含む）を通じて
+                            お客様からご提供頂く氏名、電話番号、電子メールアドレス等、お客様個人を識別できる情報あるいはお客様個人
+                            に固有の情報をいいます。
+                        </dd>
+                    <dt>個人情報の利用目的</dt>
+                        <dd>当社は、お客様等の個人情報を以下の目的のために利用いたします。
+                            <br>(1)お客様情報管理のため
+                            <br>(2)メールマガジン送信のため
+                            <br>(3)不定期アンケート送信のため
+                            <br>(4)問合せ等に対する対応するため
+                            <br>(5)電気設備設計に関わるサービスの新規開発に必要なデータの解析や分析のため
+                            <br>(6)当社サービスに関連する情報の提供のため
+                            <br>(7)システムの維持、不具合対応のため
+                            <br>(8)契約や法令等に基づく権利の行使や義務の履行のため
+                            <br>(9)その他の各種連絡、対応管理、関連資料送付等のため
+                        </dd>
+                    <dt>個人情報の取得</dt>
+                       <dd>客様の情報は本サイト（携帯サイトを含む）の入力欄にお客様自身により直接入力された情報のみを収集し、
+                        その他の手段により情報を入手することはありません。
+                        <br>ただし、当社通常業務において、当社サービスに同意し、個人情報に関わる内容についても同意を得れた
+                        お客様の個人情報については収集できるものとします。
+                        <br>当社は本サイト（携帯サイトを含む）の入力欄にお客様自身により直接入力された情報に誤りや古くなってしまい、
+                        当社サービスを受けられないことに対する責任は一切負いません。
+                       </dd>
+                    <dt>個人情報の提供</dt>
+                        <dd>ご提供頂きました個人情報は、次の場合を除き第三者に開示することは致しません。
+                            <br>(1) お客様の同意がある場合
+                            <br>(2) 法令等により提供を求められた場合
+                        </dd>
+                    <dt>開示等</dt>
+                        <dd>人情報の開示、訂正、消去または利用の停止を本人から依頼された場合には、相当合理的な期間内に、
+                            合理的妥当な範囲で対応します。ただし、個人情報を開示することにより次のいずれかに該当する場合は、
+                            その全部または一部を開示しないこともあり、開示しない決定をした場合には、その旨を遅滞なく通知します。
+                            <br>(1) ご本人または第三者の生命、身体、財産その他の権利利益を害するおそれがある場合
+                            <br>(2) 当社の業務の適正な実施に著しい支障を及ぼすおそれがある場合
+                            <br>(3) 法令に違反することとなる場合
+                        </dd>
+                    <dt>法令遵守及び継続的改善</dt>
+                        <dd>当社が保有する個人情報に関して適用される法令、ガイドライン、内部規則等を遵守すると共に、
+                            適切な運用が実施されるよう管理と必要な是正を行い、個人情報保護の取組みを継続的に見直し改善していきます。
+                        </dd>
+                    <dt>改定</dt>
+                        <dd>当社は予告なく本方針を改定する場合があります。本方針を改定した場合には、その旨を当社サイト上で告知しますので、
+                            定期的にご確認下さいますようお願いいたします。
+                            <br>以上
+                            <br>2017年1月4日制定
+                        </dd>
+                </dl>
+            </div>
+        </div>
+
+        <footer>
+            <div class="FooterWrapper" style="border-style: solid;border-width: 1px 0px 0px 0px; border-color:rgb(110,110,110);">
+                <p class="footer_coments" style="font-size:20px;font-weghit:900;letter-spacing;5px;">株式会社ＥＬＥＰＬＡＮ</p>
+                <div class="FooterContents">
+                    <p>Copyright © ELEPLAN Inc. All rights reserved.<br>
+                        東京都中央区京橋2-12-2 NEWS X 10F<br>
+                        Email: info@eleplan.jp
+                    </p>
+                </div>
+                <div class="selecters">
+                    <a class="SmallSelecters" href="{% url 'SiteMap' %}">サイトマップ</a>
+                    <a class="SmallSelecters" href="{% url 'PrivacyPolicy' %}">| プライバシーポリシー</a>
+                    <a class="SmallSelecters" href="{% url 'FaqIndexAdd' %}">| 問合せ</a>
+                </div>
+            </div>
+        </footer>
+
+    </body>
+
+</html>

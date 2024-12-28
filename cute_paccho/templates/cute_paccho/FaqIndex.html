@@ -1,0 +1,89 @@
+{% load static %}
+<!docutype html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="ELEPLANへの業務委託、募集応募、その他お問い合わせはこちらからお願いします">
+        <titele>ELEPLAN|問合せフォーム</title>
+        <link rel="icon" href="favicon.ico">
+
+        <link rel="stylesheet" type="text/css" href="{% static 'cute_paccho/css/style.css' %}"/>
+        <link rel="stylesheet" type="text/css" href="{% static 'cute_paccho/css/StyleFaqIndex.css' %}"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap" rel="stylesheet">
+        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=vpn_key" />
+        
+        <style>
+            body {
+              font-family: 'Kosugi Maru';
+            }
+          </style>
+    </head>
+    
+    <body>
+        <header>
+            <nav class="HeaderArea">
+                <a href="{% url 'index' %}"><h1>ELEPLAN</h1></a>
+                <div class="selecters">
+                    <a class="header_selecters" href="{% url 'CompanyProfIndex' %}">会社概要</a>
+                    <a class="header_selecters" href="{% url 'Recruitment' %}">採用・募集</a>
+                    <a class="header_selecters" href="{% url 'FaqIndexAdd' %}">問合せ</a>
+                    <a class="login_bottom" href="{% url 'MembersIndex' %}"><span class="material-symbols-outlined">
+                        vpn_key</span>メンバーサイト</a>
+                </div>
+            </nav>
+        </header>
+
+        <div class="ContentRapper">
+            <div class="FormWrapper">
+                <p style="font-size:24px;color:rgb(0, 136, 255,1);">問合せフォーム</p>
+                <form action="{% url 'FaqIndexAdd' %}" method="post">
+                    {% csrf_token %}
+                    <p>入力日{{ form.InputDate }} <span style="color:red;font-weight;400;">*</span>印は入力必須項目です</p>
+            </div>
+            <div class="ContentsList">    
+                <div style="margin-right:50px;">
+                    <p>問合せ内容<span style="color:red;font-weight;400;">*</span></p>{{ form.FaqTitle }}
+                    <p>会社名</p>{{ form.CompanyName }}
+                    <p>お名前<span style="color:red;font-weight;400;">*</span></p>{{ form.Name }}
+                </div>
+                
+                <div>      
+                    <p>電話番号</p>{{ form.TelephoneNumber }}
+                    <p>メールアドレス<span style="color:red;font-weight;400;">*</span></p>{{ form.MailAddress }}
+                    <p>問合せ内容<span style="color:red;font-weight;400;">*</span></p>{{ form.Massage }}
+                        <div style="margin-top:30px;">
+                            <input type="submit" value="送信" class="btn btn-primary">
+                        </div>
+                    <p>※送信機能が正しく機能しない場合お手数おかけいたしますが
+                        <span style="font-weight:800;color: rgb(0, 136, 255,1);">info@eleplan.jp</span>
+                        ​までメールをお送り願います。
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="FooterWrapper" style="border-style: solid;border-width: 1px 0px 0px 0px; border-color:rgb(110,110,110);">
+                <p class="footer_coments" style="font-size:20px;font-weghit:900;letter-spacing;5px;">株式会社ＥＬＥＰＬＡＮ</p>
+                <div class="FooterContents">
+                    <p>Copyright © ELEPLAN Inc. All rights reserved.<br>
+                        東京都中央区京橋2-12-2 NEWS X 10F<br>
+                        Email: info@eleplan.jp
+                    </p>
+                </div>
+                <div class="selecters">
+                    <a class="SmallSelecters" href="{% url 'SiteMap' %}">サイトマップ</a>
+                    <a class="SmallSelecters" href="{% url 'PrivacyPolicy' %}">| プライバシーポリシー</a>
+                    <a class="SmallSelecters" href="{% url 'FaqIndexAdd' %}">| 問合せ</a>
+                </div>
+            </div>
+        </footer>
+
+    </body>
+
+</html>

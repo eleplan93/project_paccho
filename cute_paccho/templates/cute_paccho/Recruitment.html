@@ -1,0 +1,124 @@
+{% load static %}
+<!docutype html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="ELEPLANの採用・募集要綱を確認頂けます。新卒採用、協力会社募集など">
+        <titele>ELEPLAN|採用・募集</title>
+        <link rel="icon" href="favicon.ico">
+
+        <link rel="stylesheet" type="text/css" href="{% static 'cute_paccho/css/style.css' %}"/>
+        <link rel="stylesheet" type="text/css" href="{% static 'cute_paccho/css/StyleRecruitment.css' %}"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+         
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap" rel="stylesheet">
+        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=vpn_key" />
+        
+        <style>
+            body { font-family: 'Kosugi Maru'; }
+          </style>
+    </head>
+    
+    <body>
+        <header>
+            <nav class="HeaderArea">
+                <a href="{% url 'index' %}"><h1>ELEPLAN</h1></a>
+                <div class="selecters">
+                    <a class="header_selecters" href="{% url 'CompanyProfIndex' %}">会社概要</a>
+                    <a class="header_selecters" href="{% url 'Recruitment' %}">採用・募集</a>
+                    <a class="header_selecters" href="{% url 'FaqIndexAdd' %}">問合せ</a>
+                    <a class="login_bottom" href="{% url 'MembersIndex' %}"><span class="material-symbols-outlined">
+                        vpn_key</span>メンバーサイト</a>
+                </div>
+            </nav>
+        </header>
+
+        <div class="ContentRapper">
+            <p style="margin-left: 80px;font-size:24px;color:rgb(0, 136, 255,1);">採用・募集要綱</p>
+            <p style="margin-left: 80px;font-size:16px;color:rgb(110,110,110,1);">クリックすると要綱をご覧になれます</p>
+            <div class="RecruitmentWrapper">
+                
+                <details class="RecruitmentSummary">
+                    <summary><strong><span style="color:red; font-size:20px;">募集中</span>  |正社員(新卒、初心者)</strong></summary>
+                    <dl>
+                        <dt>1. 仕事の内容</dt>
+                            <dd>建築設備設計CADによる作図を中心に、希望によっては設備計画、設計調整、クライアント打合せなど案件に要求される全ての業務まで担当頂きます</dd>
+                        <dt>2. 雇用形態</dt>
+                            <dd>正社員(未経験者、新卒(経験2年未満))</dd>
+                        <dt>3. 勤務地</dt>
+                            <dd>東京都 中央区 京橋</dd>
+                            <dd>JR 東京駅:徒歩15分<br>
+                                ﾒﾄﾛ銀座線 京橋駅:徒歩5分<br>
+                                都営浅草線 宝町駅:徒歩1分<br>
+                                ﾒﾄﾛ日比谷線 八丁堀駅:徒歩10分<br>
+                                ﾒﾄﾛ銀座・東西線 日本橋駅:徒歩10分
+                            </dd>
+                        <dt>4.勤務時間</dt>
+                            <dd>9:30～18:30(実働8時間)※時間応相談（短縮勤務他可能）</dd>
+                        <dt>5. 休日・休暇</dt>
+                            <dd>土曜、日曜、祝日 その他 有給休暇、夏季休暇、年末年始休暇</dd>
+                        <dt>6. 使用CAD</dt>
+                            <dd>Autocad・Autocad Revit</dd>
+                        <dt>7. 給与</dt>
+                            <dd>年収(基本給)300万円～500万円(スキルにより決定)</dd>
+                        <dt>8. 待遇・福利厚生</dt>
+                            <dd>採用後３か月間は試用期間とします<br>
+                                年１回給与額の見直し、面接を行います<br>
+                                交通費 全額支給<br>
+                                健康保険、厚生年金保険、雇用保険、労災保険等<br>就業インターバル制度採用
+                            </dd>
+                        <dt>9. 採用の流れ</dt>
+                            <dd>・応募後 履歴書、職務経歴書を作成頂き面接を行います<br>
+                                ・採用通知は応募者指定の方法にて７営業日以内に行います
+                            </dd>
+                        <dt>10. その他</dt>
+                            <dd>・弊社は個人の能力を最大限伸ばす業務割当・教育を行い、かつ自主性を尊重します<br>
+                                ・設立10年目の建築設備設計事務所です。 今までの設計経験を生かした 「建物との新しい付き合い方」を模索し事業として実践することを考えています<br>
+                                ・平均年齢35歳の会社です。 年齢問わず議論を交わしクライアントへの最適解を常に求め続ける会社です<br>
+                                ・商業建築が比較的多いですが、様々な建物用途、規模の設計経験を積めますので今まで培われたスキルをさらに向上させることができます</br>
+                                ・弊社はペーパーレスを実現しており、リモートワークもスキルに応じ対応可能です。弊社にとって大切な人材になると考えれば採用させて頂きます
+                            </dd>
+                    </dl>
+                </details>
+            </div>
+
+            <div class="RecruitmentWrapper">
+                <details class="RecruitmentSummary">
+                    <summary><strong><span style="color:rgb(0, 136, 255,1); font-size:20px;">休止中</span>  |SOHO(在宅業務委託・電気設備設計)</strong></summary>
+                </details>
+            </div>
+            <div class="RecruitmentWrapper">
+                <details class="RecruitmentSummary">
+                    <summary><strong><span style="color:rgb(0, 136, 255,1); font-size:20px;">休止中</span>  |協力事務所(電気設備設計)</strong></summary>
+                </details>
+            </div>
+            <div class="RecruitmentWrapper">
+                <details class="RecruitmentSummary">
+                    <summary><strong><span style="color:rgb(0, 136, 255,1); font-size:20px;">休止中</span>  |協力事務所(機械設備設計)</strong></summary>
+                </details>
+            </div>
+        </div>
+
+        <footer>
+            <div class="FooterWrapper" style="border-style: solid;border-width: 1px 0px 0px 0px; border-color:rgb(110,110,110);">
+                <p class="footer_coments" style="font-size:20px;font-weghit:900;letter-spacing;5px;">株式会社ＥＬＥＰＬＡＮ</p>
+                <div class="FooterContents">
+                    <p>Copyright © ELEPLAN Inc. All rights reserved.<br>
+                        東京都中央区京橋2-12-2 NEWS X 10F<br>
+                        Email: info@eleplan.jp
+                    </p>
+                </div>
+                <div class="selecters">
+                    <a class="SmallSelecters" href="{% url 'SiteMap' %}">サイトマップ</a>
+                    <a class="SmallSelecters" href="{% url 'PrivacyPolicy' %}">| プライバシーポリシー</a>
+                    <a class="SmallSelecters" href="{% url 'FaqIndexAdd' %}">| 問合せ</a>
+                </div>
+            </div>
+        </footer>
+
+    </body>
+
+</html>

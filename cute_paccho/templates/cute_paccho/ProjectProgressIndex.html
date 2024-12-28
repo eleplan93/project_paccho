@@ -1,0 +1,146 @@
+{% load static %}
+<!docutype html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="【メンバーのみ】ELEPLAN 物件状況の確認ができます。受託先、締め切りなど">
+        <titele>ELEPLAN|物件状況</title>
+        <link rel="icon" href="favicon.ico">
+
+        <link rel="stylesheet" type="text/css" href="{% static 'cute_paccho/css/style.css' %}"/>
+        <link rel="stylesheet" type="text/css" href="{% static 'cute_paccho/css/StyleMembersIndex.css' %}"/>
+        <link rel="stylesheet" type="text/css" href="{% static 'cute_paccho/css/StyleProjectProgress.css' %}"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap" rel="stylesheet">
+        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=vpn_key" />
+        
+        <style>
+            body { font-family: 'Kosugi Maru'; }
+          </style>
+    </head>
+    
+    <body>
+        <header>
+            <nav class="HeaderArea">
+                <a href="{% url 'index' %}"><h1>ELEPLAN</h1></a>
+                <div class="selecters">
+                    <a class="header_selecters" href="{% url 'CompanyProfIndex' %}">会社概要</a>
+                    <a class="header_selecters" href="{% url 'Recruitment' %}">採用・募集</a>
+                    <a class="header_selecters" href="{% url 'FaqIndexAdd' %}">問合せ</a>
+                    <a class="login_bottom" href="{% url 'MembersIndex' %}"><span class="material-symbols-outlined">
+                        vpn_key</span>メンバーサイト</a>
+                </div>
+            </nav>
+        </header>
+        
+        <div class="SelecterWrapper">
+            <div class="SubSelecters">
+                <a class="SelectersTitle" href ="{% url 'MembersIndex' %}">スタッフの作業状況</a>
+            </div>
+            
+            <div class="SubSelecters">
+                <a class="SelectersTitle" href ="{% url 'ProjectProgressIndex' %}">物件状況</a>
+            </div>
+            
+            <div class="SubSelecters">
+                <a class="SelectersTitle" href ="{% url 'ElecCulcIndex' %}">設計計算ソフト</a>
+            </div>
+
+            <div class="SubSelecters">
+                <a class="SelectersTitle" href ="#">電気資料</a>
+            </div>
+
+            <div>
+                <form action="{% url 'LogoutButton' %}" method="post">
+                    {% csrf_token %}
+                    <button class="LogoutButton" type="submit">ログアウト</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="ContentWrapper">
+            <div class="TableArea">
+                <h3>物件状況</h3>
+                    <div style=" display:flex; justify-item:center;">
+                        <div class="Legend" style="background-color:rgb(255,0,0,0.2);"><p>赤色は締日の15日前</p></div>
+                        <div class="Legend" style="background-color:rgb(255, 255, 0,0.4);"><p>黄色は締日の30日前</p></div>
+                    </div>
+                <div id="content-wrapper"></div>
+            </div>
+        </div>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const data = {{ data|safe }}; // dataをJavaScriptの配列に変換
+                const tbl = document.createElement("table");
+                const tblBody = document.createElement("tbody");
+                const today = new Date();
+
+                for (let i = 0; i < data.length; i++) { // 配列のインデックスを使用
+                    const row = document.createElement("tr");
+
+                    // 行を交互に色を変える
+                    if (i % 2 === 0) {
+                        row.classList.add('even-row');
+                    } else {
+                        row.classList.add('odd-row');
+                    }
+
+                    for (let j = 0; j < data[i].length; j++) { // 配列のインデックスを使用
+                            const cell = document.createElement("td");
+                            const cellText = document.createTextNode(data[i][j]); // dataから値を取得
+                            cell.appendChild(cellText);
+                            row.appendChild(cell);
+                            
+                            if (i == 0) {
+                                cell.classList.add('firstRowWord');
+                            } else {
+                                cell.classList.add('TableCellStyle');
+                            }
+
+                            // 締切日判定
+                            const deadLine = new Date(data[i][10]);
+                            const defSecond = deadLine.getTime()-today.getTime()
+                            const defDays = Math.ceil(defSecond / (1000*60*60*24))
+
+                            if (data[i][10] !="" && defDays <= 30 && defDays > 15) {
+                                cell.classList.add('alartYellow'); // css追加
+                            } else if (data[i][10] !="" && defDays <= 15) {
+                                cell.classList.add('alartRed'); // css追加
+                            }
+                        }
+
+                    tblBody.appendChild(row);
+                }
+                tbl.appendChild(tblBody);
+                const contentWrapper = document.getElementById("content-wrapper");
+                contentWrapper.appendChild(tbl);
+                
+            });
+        </script>
+
+        
+        <footer>
+            <div class="FooterWrapper" style="border-style: solid;border-width: 1px 0px 0px 0px; border-color:rgb(110,110,110);">
+                <p class="footer_coments" style="font-size:20px;font-weghit:900;letter-spacing;5px;">株式会社ＥＬＥＰＬＡＮ</p>
+                <div class="FooterContents">
+                    <p>Copyright © ELEPLAN Inc. All rights reserved.<br>
+                        東京都中央区京橋2-12-2 NEWS X 10F<br>
+                        Email: info@eleplan.jp
+                    </p>
+                </div>
+                <div class="selecters">
+                    <a class="SmallSelecters" href="{% url 'SiteMap' %}">サイトマップ</a>
+                    <a class="SmallSelecters" href="{% url 'PrivacyPolicy' %}">| プライバシーポリシー</a>
+                    <a class="SmallSelecters" href="{% url 'FaqIndexAdd' %}">| 問合せ</a>
+                </div>
+            </div>
+        </footer>
+
+    </body>
+
+</html>

@@ -1,0 +1,75 @@
+{% load static %}
+<!docutype html>
+<html lang="ja">
+    <head>
+      <meta charset="utf-8">
+      <meta name="description" content="【メンバーのみ】ELEPLAN 作業の編集が可能です">
+      <titele>ELEPLAN|スタッフの作業状況</title>
+      <link rel="icon" href="favicon.ico">
+
+      <link rel="stylesheet" type="text/css" href="{% static 'cute_paccho/css/style.css' %}"/>
+      <link rel="stylesheet" type="text/css" href="{% static 'cute_paccho/css/StyleMembersIndex.css' %}"/>
+      <link rel="stylesheet" type="text/css" href="{% static 'cute_paccho/css/StyleWorkAddWindow.css' %}"/>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+          
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap" rel="stylesheet">
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=vpn_key" />
+      
+      <style>
+          body { font-family: 'Kosugi Maru'; }
+        </style>
+    </head>
+    
+    <body>
+      <header>
+          <nav class="HeaderArea">
+              <a href="{% url 'index' %}"><h1>ELEPLAN</h1></a>
+              <div class="selecters">
+                  <a class="header_selecters" href="{% url 'CompanyProfIndex' %}">会社概要</a>
+                  <a class="header_selecters" href="{% url 'Recruitment' %}">採用・募集</a>
+                  <a class="header_selecters" href="{% url 'FaqIndexAdd' %}">問合せ</a>
+                  <a class="login_bottom" href="{% url 'MembersIndex' %}"><span class="material-symbols-outlined">
+                      vpn_key</span>メンバーサイト</a>
+              </div>
+          </nav>
+      </header>
+
+        <div class="ContentRapper">
+            <div class="InputArea">
+              <h3>作業の編集</h3>
+              <form action="{% url 'WorkEditWindow' id %}" method="post">
+                  {% csrf_token %}
+                  <p>名前</p>{{ form.name }}
+                  <p>更新日</p>{{ form.last_update }}
+                  <p>物件名</p>{{ form.project_name }}
+                  <p>作業内容</p>{{ form.detail_line }}
+                  <p>完了日</p>{{ form.dead_line }}
+                  <p>完了マーク</p>{{ form.check_done}}
+                  <div style="margin-top:30px;">
+                    <input type="submit" value="編集完了 ->作業状況に戻ります" class="btn btn-primary">  
+                  </div>
+            </div>
+        </div>
+
+        <footer>
+          <div class="FooterWrapper" style="border-style: solid;border-width: 1px 0px 0px 0px; border-color:rgb(110,110,110);">
+              <p class="footer_coments" style="font-size:20px;font-weghit:900;letter-spacing;5px;">株式会社ＥＬＥＰＬＡＮ</p>
+              <div class="FooterContents">
+                  <p>Copyright © ELEPLAN Inc. All rights reserved.<br>
+                      東京都中央区京橋2-12-2 NEWS X 10F<br>
+                      Email: info@eleplan.jp
+                  </p>
+              </div>
+              <div class="selecters">
+                  <a class="SmallSelecters" href="{% url 'SiteMap' %}">サイトマップ</a>
+                  <a class="SmallSelecters" href="{% url 'PrivacyPolicy' %}">| プライバシーポリシー</a>
+                  <a class="SmallSelecters" href="{% url 'FaqIndexAdd' %}">| 問合せ</a>
+              </div>
+          </div>
+      </footer>
+
+    </body>
+</html>

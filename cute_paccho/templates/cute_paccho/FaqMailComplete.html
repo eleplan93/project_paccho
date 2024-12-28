@@ -1,0 +1,82 @@
+{% load static %}
+<!docutype html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <titele>ELEPLAN|問合せ御礼</title>
+        <link rel="icon" href="favicon.ico">
+
+        <link rel="stylesheet" type="text/css" href="{% static 'cute_paccho/css/style.css' %}"/>
+        <link rel="stylesheet" type="text/css" href="{% static 'cute_paccho/css/StyleFaqIndex.css' %}"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap" rel="stylesheet">
+        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=vpn_key" />
+        
+        <style>
+            body {
+              font-family: 'Kosugi Maru';
+            }
+          </style>
+    </head>
+    
+    <body>
+        <header>
+            <nav class="HeaderArea">
+                <a href="{% url 'index' %}"><h1>ELEPLAN</h1></a>
+                <div class="selecters">
+                    <a class="header_selecters" href="{% url 'CompanyProfIndex' %}">会社概要</a>
+                    <a class="header_selecters" href="{% url 'Recruitment' %}">採用・募集</a>
+                    <a class="header_selecters" href="{% url 'FaqIndexAdd' %}">問合せ</a>
+                    <a class="login_bottom" href="{% url 'MembersIndex' %}"><span class="material-symbols-outlined">
+                        vpn_key</span>メンバーサイト</a>
+                </div>
+            </nav>
+        </header>
+
+        <div class="ContentRapper">
+            <div class="FormWrapper">
+                <p style="font-size:24px;color:rgb(0, 136, 255,1);">問合せフォーム</p>
+                    <p style="font-size:20px; color:red;">送信完了</p>
+                    <p>下記の内容にて送信しました。<br>
+                        お問合わせ内容を確認し、担当者より改めてご連絡させていただきます。</p>
+                <!-- <dl>
+                    <dt>問合せ内容:</dt>
+                        <dd>{{ FaqTitle }}</dd>
+                    <dt>会社名:</dt>
+                        <dd>{{ CompanyName }}</dd>
+                    <dt>お名前:</dt>
+                        <dd>{{ Name }}</dd>
+                    <dt>電話番号:</dt>
+                        <dd>{{ TelephoneNumber }}</dd>
+                    <dt>メールアドレス:</dt>
+                        <dd>{{ MailAddress }}</dd>
+                    <dt>問合せ内容:</dt>
+                        <dd>{{ Massage }}</dd>
+                </dl> -->
+            </div>
+        </div>
+
+        <footer>
+            <div class="FooterWrapper" style="border-style: solid;border-width: 1px 0px 0px 0px; border-color:rgb(110,110,110);">
+                <p class="footer_coments" style="font-size:20px;font-weghit:900;letter-spacing;5px;">株式会社ＥＬＥＰＬＡＮ</p>
+                <div class="FooterContents">
+                    <p>Copyright © ELEPLAN Inc. All rights reserved.<br>
+                        東京都中央区京橋2-12-2 NEWS X 10F<br>
+                        Email: info@eleplan.jp
+                    </p>
+                </div>
+                <div class="selecters">
+                    <a class="SmallSelecters" href="{% url 'SiteMap' %}">サイトマップ</a>
+                    <a class="SmallSelecters" href="{% url 'PrivacyPolicy' %}">| プライバシーポリシー</a>
+                    <a class="SmallSelecters" href="{% url 'FaqIndexAdd' %}">| 問合せ</a>
+                </div>
+            </div>
+        </footer>
+
+    </body>
+
+</html>

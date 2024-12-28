@@ -1,0 +1,52 @@
+body {
+    font-family: "Kosugi Maru";
+    max-width: 1000px;
+}
+
+.kosugi-maru-regular {
+    font-family: "Kosugi Maru", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }  
+
+.ContentWrapper {
+    margin-top:10px;
+    width: 1000px;
+}
+
+.ContentWrapper h2 {
+    font-size:24px;
+    color:rgb(0, 136, 255,1);
+  }
+
+.PrivacyPolicyArea {
+    margin-left: 80px;
+    margin-right: 80px;
+}
+
+.PrivacyPolicyArea dt {
+    font-size: 18px;
+    font-weight: 800;
+    color:rgb(0, 136, 255,1);
+}
+
+.PrivacyPolicyArea dd {
+    margin-bottom:30px;
+    font-size: 14px;
+    line-height: 1.8;
+    color: rgb(110,110,110,1)
+
+}
+
+.PrivacyPolicyArea a {
+    text-decoration: none;
+}
+
+.PrivacyPolicyArea a:hover {
+    background-color: rgb(0, 136, 255,0.4);
+
+}
+
+.PrivacyPolicyArea a:active {
+    background-color: rgb(0, 136, 255,0.8);
+}

@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "mystical-magnet-443807-q4",
+  "private_key_id": "64e4c79c960ce6528b4bc30c3d8c18c523887697",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCtczMG5z+8EjOc\nWi+H1e1P6O3w2mWBYxtto583wPEqisRMA7H29nunuzLj6jG3TcQyubGl4A2vwh5b\nVm8SXpKeQfsK56F0bxfOK5xz2mB6Pyu9x4/BCsyyyxJgV2fzUn+mpi9hewDtaA4h\nAgHzsdbPCNKNCbv+gI2C0eqlkxxQRcv8w0wDAMPQNkkKeHpRu0viIEupAFVCzpaK\nIldg2W+BBmxbLXAzM2UKomQc0MdQtPZyCaP06R9D1fB6vG6QK8MwjFl4LopZlgpC\n11W4eG6noGzCXFyVF9m1SFJbNR2EddFXz10EriVTrvzsc1NOp3Chgco0KAlX/C60\nlurBHViJAgMBAAECggEAG80ZsjMRr6r5M8fu02ZyNbs/nDndSDpi9JVj2VNnNGru\noMJ83XlPg6iJNSfeFSP1XS4Pb+d0OiYyqHA3uGmJNa2ct/g9lESUO7sYxicMDLwg\nXjhk7cu12Lic9u07n7Aq/sKnWIgXM3ZYwWipeG6aYC/pU6rqQ5ZGWGAeLLDiOmlZ\n4Xookmoh6j4dLA1hNX3YCTcyTV5Po3SuJbIkPWHvLuEsgOpSlZz4XNiTNrgL9Pbo\nn+b8dm65eJHRYl8q+6hMnVONs3rWh71saDUxcztZ7y2Er3d8yiapGPzDZr9Fgr8k\nJMVUVtwNJHif5pY56M3amnE8Ct7TzDAJLut/1tixowKBgQDg7l2j4fjnOR9FGh0a\nzI8onTSnmR59zJQgPU0TBSIwMo8uiJQalFRAN4JoFs6tM5+Xxb0cefri3byiNTKR\nb7KBTb4di/MXkpsv5de4ZlFD+LOUlaqNWQW89+Bh+wA98C72tAyO8NB/gFQM7OOr\nxnrAq+GdgzZfdjFVQRrUNOLIwwKBgQDFaHH2cR6RJGOv5KVIUpcTK8nvnwgjxYWw\n/MG5M7tT53SDzOaHLflUnqgg/IJx65caopvlI1akPAECbQ3VZ9kWd4Kl9UKyxba4\nva+gbhMCHi19k9znCpAy/6w9coErz0lIFvxBesLBPevDKeCgIn6P9Cra9k4+OZQ5\n38VHUSEkwwKBgGM55Ec6laHzOg8y4OoEmZbSGvtgeeoHCMVcJZchaZ6Xf0CI8cTz\n8GLP2hBvF0ejAWFj0vQv/3R7Ww63pxIvkzClihvgtCGPBDTSESMAyBLTMO14RN/M\nCNL/CpZOsyGfxigA75VTOLc2dl2pVxpdGaPLb2EcFC1yp3qzmNFKb00fAoGABfhY\nqflV0VHmaeViUkOdKglC/Co1Fs/ccTPTsAQugCUZ0vqZZjEvvy1lLEo2r7dORJHy\nYQWmkyT1attddbzERferTdWTBNER65hg/VsW3BOJkKiuH5akMcalsN4LpgWI09NO\nIbTSuwFiZe6YSn+AkF30Bdc5GoynPPDViIidlf0CgYAIO9Vq2BT2Deiyjr1RiGno\naurslpvQ3S4pfoVwESGmKSA+qWxruoeugA+g9C80/QtwWpmRDQBWE6XMTVZFyDP5\nxFaLkgOia8UtSWnGYL/sLik8rScAWmNhmPH/0xHA2yY9I5bxya8xdox7BsJPdazW\nQ081WAl2qebLqQsJJSlQXQ==\n-----END PRIVATE KEY-----\n",
+  "client_email": "cute-paccho@mystical-magnet-443807-q4.iam.gserviceaccount.com",
+  "client_id": "110198194097749025221",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/cute-paccho%40mystical-magnet-443807-q4.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
